@@ -1,0 +1,116 @@
+.footer{
+    &__subscribe{
+        background: linear-gradient(250deg, #ee9617 0%, #fe5858 100%);
+    }
+
+    &__subscribe-container{
+        @extend %container;
+        height: 250px;
+        @include  flex-row-properities(space-between, center);
+        padding: 0 160px;
+    }
+
+    &__subscribe-about{
+        width: 230px;
+        font-size: 28px;
+        font-weight: 500;
+        color: $white-color;
+    }
+
+    &__subscribe-email{
+        position: relative;
+    }
+
+    &__subscribe-input{
+        width: 384px;
+        height: 46px;
+        border-radius: 62px;
+        color: $white-color;
+        border: 1px solid $white-color;
+        background-color: transparent;
+        padding: 0 130px 0 15px;
+        &::placeholder{
+            color: $white-color;
+        }
+    }
+
+    &__subscribe-btn{
+        background-color: $white-color;
+        position: absolute;
+        border-radius: 82px;
+        font-size: 12px;
+        color: $light-red;
+        border-style: none;
+        padding: 14px 28px;
+        top: 2px;
+        right: 2px;
+        &:hover{
+            background-color: $light-red;
+            color:$white-color;
+            cursor: pointer;
+        }
+    }
+
+    &__references{
+        background-color: #000000;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__references-link{
+        text-decoration: none;
+        cursor: pointer;
+        color: $white-color;
+        font-size: 12px;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+@media  screen and (max-width: 768px) {
+    .footer{
+        &__subscribe-container{
+            padding: 0 15px;
+        }
+    }
+}
+
+@media  screen and (max-width: 576px) {
+    .footer{
+        &__subscribe-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__subscribe-about{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media  screen and (max-width: 576px) {
+    .footer{
+        &__subscribe-container{
+            padding: 0 15px;
+        }
+
+        &__subscribe-about{
+            font-size: 18px;
+            text-align: center;
+        }
+
+        &__subscribe-input{
+            width: 250px;
+            height: 40px;
+            padding: 0 92px 0 15px;
+        }
+
+        &__subscribe-btn{
+            padding: 11px;
+        }
+    }
+}

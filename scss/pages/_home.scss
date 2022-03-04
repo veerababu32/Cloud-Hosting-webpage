@@ -1,0 +1,1440 @@
+.banner{
+    background-color: $banner-bg-color;
+    color: $white-color;
+
+    a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .disable{
+        display: none;
+    }
+
+    &__navbar{
+        @extend %container;
+        @include display-justify-properities(flex, space-between);
+        @include padding(28px, 15px, 94px, 15px);
+    }
+
+    &__navbar-title{
+        font-size: 32px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &__navbar-right{
+        @include display-align-properities(flex, center);
+
+        a{
+            color: $white-color;
+            cursor: pointer;
+        }
+    }
+
+    &__navbar-links{
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 42px;
+
+        &:nth-child(5){
+            margin-right: 0;
+        }
+    }
+
+    &__container{
+        @extend %container;
+        @include display-justify-properities(flex, space-between);
+        @include padding (0, 15px, 108px, 15px);
+        margin-bottom: 38px;
+    }
+
+    &__left{
+        margin-top: 32px;
+    }
+
+    &__name-section{
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    &__line{
+        width: 18px;
+        @include margin(auto, 4px, auto, 0);
+        border: 1px solid;
+    }
+
+    &__name{
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__sub-title{
+        font-size: 25px;
+        font-weight: 600;
+        @include margin(0, 0, 7px, 0);
+    }
+
+    &__title{
+        font-size: 63px;
+        font-weight: 700;
+        @include margin(0, 0, 7px, 0);
+    }
+
+    &__description{
+        font-size: 15px;
+        @include margin(0, 0, 46px, 0);
+    }
+
+    &__button{
+        display: inline-block;
+        background-color: $white-color;
+        color: $thick-red-color;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 82px;
+        @include padding(10px, 21px, 10px, 21px);
+        &:hover{
+            color: $white-color;
+            background-color: $thick-red-color;
+            cursor: pointer;
+        }
+    }
+
+    &__right{
+        @include flex-row-properities(center, center);
+        width: 450px;
+        height: 450px;
+        background-color: $white-color;
+        border: 6px solid $banner-right-border-color;
+        border-radius: 16px;
+    }
+
+    &__cloud-img{
+        width: 365px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .banner{
+        &__navbar{
+            @include padding(24px, 15px, 86px, 15px);
+        }
+
+        &__navbar-title{
+            font-size: 30px;
+        }
+
+        &__navbar-links{
+            margin-right: 35px;
+        }
+
+        &__container{
+            @include padding (0, 15px, 100px, 15px);
+            margin-bottom: 32px;
+        }
+
+        &__left{
+            margin-top: 28px;
+        }
+
+        &__name-section{
+            margin-bottom: 12px;
+        }
+
+        &__line{
+            width: 16px;
+        }
+
+        &__name{
+            font-size: 10px;
+        }
+
+        &__sub-title{
+            font-size: 22px;
+        }
+
+        &__title{
+            font-size: 50px;
+        }
+
+        &__description{
+            font-size: 15px;
+            @include margin(0, 0, 40px, 0);
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .banner{
+        &__navbar{
+            @include padding(22px, 15px, 80px, 15px);
+            flex-wrap: wrap;
+        }
+
+        .hamburger{
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        &__navbar-right{
+            display: none;
+        }
+
+        .right-section{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            a{
+                color: $white-color;
+                cursor: pointer;
+            }
+        }
+
+        &__navbar-links{
+            margin-bottom: 10px;
+
+            &:nth-child(1){
+                margin-top: 10px;
+            }
+
+            &:nth-child(5){
+                margin-bottom: 0;
+            }
+        }
+
+        &__container{
+            @include padding (0, 15px, 90px, 15px);
+            margin-bottom: 30px;
+        }
+
+        &__title{
+            font-size: 45px;
+        }
+
+        &__right{
+            width: 400px;
+            height: 400px;
+        }
+
+        &__cloud-img{
+            width: 340px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .banner{
+        &__navbar{
+            @include padding(22px, 15px, 60px, 15px);
+        }
+
+        &__container{
+            @include padding (0, 15px, 80px, 15px);
+            margin-bottom: 25px;
+        }
+
+        &__title{
+            font-size: 32px;
+        }
+
+        &__right{
+            width: 360px;
+            height: 360px;
+        }
+
+        &__cloud-img{
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .banner{
+        &__navbar{
+            @include padding(22px, 15px, 50px, 15px);
+        }
+
+        &__container{
+            @include padding (0, 15px, 60px, 15px);
+            margin-bottom: 20px;
+        }
+
+        &__left{
+            margin-top: 26px;
+        }
+
+        &__sub-title{
+            font-size: 22px;
+        }
+
+        &__title{
+            font-size: 26px;
+        }
+
+        &__description{
+            font-size: 14px;
+            @include margin(0, 0, 35px, 0);
+        }
+
+        &__button{
+            font-size: 14px;
+            @include padding(10px, 21px, 10px, 21px);
+        }
+
+        &__right{
+            width: 300px;
+            height: 300px;
+        }
+
+        &__cloud-img{
+            width: 210px;
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .banner{
+        &__navbar{
+            @include padding(20px, 15px, 20px, 15px);
+        }
+
+        &__container{
+            @include padding (0, 15px, 40px, 15px);
+            @include display-direction-properties(flex, column);
+        }
+
+        &__left{
+            margin-top: 0;
+        }
+
+        &__sub-title{
+            font-size: 18px;
+        }
+
+        &__description{
+            font-size: 12px;
+            @include margin(0, 0, 20px, 0);
+        }
+
+        &__button{
+            font-size: 12px;
+            padding:10px 15px;
+            margin-bottom: 20px;
+        }
+
+        &__right{
+            width: 260px;
+            height: 260px;
+        }
+
+        &__cloud-img{
+            width: 180px;
+        }
+    }
+}
+
+.logos{
+    @extend %container;
+    @include padding(0, 15px, 95px, 15px);
+
+    &__title{
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 7px;
+    }
+
+    &__section{
+        @include flex-row-properities(space-between, center);
+    }
+
+    &__microsoft-img{
+        width: 150px;
+        height: 38px;
+    }
+
+    &__intuit-img{
+        width: 126px;
+        height: 37px;
+    }
+
+    &__veeam-img{
+        width: 187px;
+        height: 55px;
+    }
+
+    &__crayon-img{
+        width: 150px;
+        height: 51px;
+    }
+
+    &__salesforce-img{
+        width: 141px;
+        height: 89px;
+    }
+
+    &__vmware-img{
+        width: 158px;
+        height: 24px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .logos{
+        @include padding(0, 15px, 85px, 15px);
+    }
+}
+
+@media screen and (max-width:992px) {
+    .logos{
+        @include padding(0, 15px, 70px, 15px);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .logos{
+        @include padding(0, 15px, 60px, 15px);
+
+        &__section{
+            justify-content: normal;
+            flex-wrap: wrap;
+        }
+
+        &__img{
+            margin-right: 20px;
+
+            &:nth-child(4){
+                margin-right: 0;
+            }
+
+            &:nth-child(6){
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .logos{
+        @include padding(0, 15px, 40px, 15px);
+
+        &__img{
+            &:nth-child(3){
+                margin-right: 0;
+            }
+
+            &:nth-child(6){
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .logos{
+        @include padding(0, 15px, 20px, 15px);
+
+        &__section{
+            @include flex-column-properties(column, center, center);
+        }
+
+        &__img{
+            @include margin(0, 0, 10px, 0);
+        }
+    }
+}
+
+.services{
+    @extend %container;
+
+    &__title{
+        font-size: 46px;
+        color: $dark-black;
+        text-align: center;
+        font-weight: 500;
+        @include margin(0, 0, 21px, 0);
+    }
+
+    &__sub-title{
+        color: $light-red;
+    }
+
+    &__description{
+        font-size: 18px;
+        color: $light-grey;
+        text-align: center;
+        @include margin(0, 0, 131px, 0);
+    }
+
+    &__books-plans{
+        display: flex;
+        margin-bottom: 140px;
+    }
+
+    &__left{
+        width: 284px;
+        height: 634px;
+        box-shadow: 0 34px 48px $box-shadow-color;
+        margin-right: 12px;
+    }
+
+    &__left div{
+        @include display-direction-align-properties(flex, column, center);
+    }
+
+    &__left-books-img{
+        width: 284px;
+        margin-bottom: 30px;
+    }
+
+    &__left-title{
+        font-size: 26px;
+        color: $light-red;
+        font-weight: 500;
+        @include margin(0, 0, 30px, 0);
+    }
+
+    &__left-description{
+        font-size: 15px;
+        color: $light-grey;
+        width: 250px;
+        @include margin(0, 0, 82px, 0);
+        text-align: center;
+    }
+
+    &__left-link-button{
+        display: inline-block;
+        color: $white-color;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        @include padding(10px, 35px, 10px, 35px);
+        border-radius: 100px;
+        background: $bg-linear-gradient;
+        &:hover{
+            color: $white-color;
+            background: $light-red;
+            cursor: pointer;
+        }
+    }
+
+    &__right{
+        box-shadow: 0 34px 48px $box-shadow-color;
+        @include padding(30px, 15px, 30px, 15px);
+        width: 830px;
+    }
+
+    &__arrow-img{
+        width: 80px;
+        transform: rotate(355deg);
+    }
+
+    &__right-content{
+        display: flex;
+        @include margin(0, 30px, 50px, 0);
+    }
+
+    &__right-title{
+        font-size: 26px;
+        color: $dark-black;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &__right-hr-line{
+        width: 275px;
+        margin-left: 0;
+        margin-bottom: 20px;
+        border: 1px solid rgba(0, 0, 0, 25%);
+    }
+
+    &__right-description{
+        font-size: 15px;
+        color: $light-grey;
+        @include margin(0, 0, 20px, 0);
+        width: 400px;
+    }
+
+    &__right-link-button{
+        display: inline-block;
+        color: $white-color;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        @include padding(10px, 35px, 10px, 35px);
+        border-radius: 100px;
+        background: $bg-linear-gradient;
+        &:hover{
+            color: $white-color;
+            background: $light-red;
+            cursor: pointer;
+        }
+    }
+
+    &__right-upload-files-img{
+        width: 375px;
+        height: 284px;
+        margin-top: 65px;
+    }
+
+    &__right-links-section{
+        font-size: 12px;
+        @include margin(0, 0, 0, 40px);
+        font-weight: 400;
+    }
+
+    &__links{
+        color: $light-red;
+    }
+
+    &__question{
+        display: flex;
+        max-width: 1366px;
+        width: 1050px;
+        height: 250px;
+        border-left: 45px solid $question-section-border-color;
+        @include margin(0, auto, 140px, auto);
+    }
+
+    &__question-left{
+        padding: 40px;
+        width: 662px;
+    }
+
+    &__question-sub-title{
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 0;
+    }
+
+    &__question-title{
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 0;
+        color: $light-red;
+    }
+
+    &__question-hr-line{
+        width: 220px;
+        border: 1px solid $hr-line-color;
+        margin-left: 0;
+    }
+
+    &__question-call-us{
+        font-size: 22px;
+        font-weight: 400;
+        color: $light-grey;
+        margin: 0;
+    }
+
+    &__question-right{
+        @include flex-row-properities(center, center);
+        width: 345px;
+        background: $bg-linear-gradient;
+    }
+
+    &__question-link-button{
+        background-color: $white-color;
+        color: $thick-red-color;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        @include padding(10px, 30px, 10px, 30px);
+        border-radius: 80px;
+        box-shadow: 0 9px 15px $box-shadow-color;
+        &:hover{
+            color: $white-color;
+            background-color: $light-red;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .services{
+        &__books-plans{
+            margin-bottom: 120px;
+        }
+
+        &__left{
+            width: 264px;
+            height: 600px;
+            margin-right: 12px;
+        }
+
+        &__left-books-img{
+            width: 264px;
+            margin-bottom: 25px;
+        }
+
+        &__left-title{
+            @include margin(0, 0, 25px, 0);
+        }
+
+        &__left-description{
+            width: 240px;
+            @include margin(0, 0, 76px, 0);
+        }
+
+        &__right{
+            @include padding(25px, 15px, 25px, 15px);
+            width: 700px;
+        }
+
+        &__arrow-img{
+            width: 75px;
+        }
+
+        &__right-content{
+            @include margin(0, 25px, 45px, 0);
+        }
+
+        &__right-hr-line{
+            width: 270px;
+        }
+
+        &__right-description{
+            width: 355px;
+        }
+
+        &__right-upload-files-img{
+            width: 300px;
+            height: 260px;
+            margin-top: 55px;
+        }
+
+        &__right-links-section{
+            @include margin(0, 0, 0, 35px);
+        }
+
+        &__question{
+            width: 975px;
+            @include margin(0, auto, 120px, auto);
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .services{
+        &__books-plans{
+            margin-bottom: 100px;
+        }
+
+        &__left{
+            width: 254px;
+            height: 550px;
+        }
+
+        &__left-books-img{
+            width: 254px;
+        }
+
+        &__left-description{
+            width: 220px;
+        }
+
+        &__right{
+            width: 680px;
+        }
+
+        &__arrow-img{
+            width: 70px;
+        }
+
+        &__right-content{
+            @include margin(0, 20px, 40px, 0);
+        }
+
+        &__right-hr-line{
+            width: 250px;
+        }
+
+        &__right-description{
+            width: 325px;
+        }
+
+        &__right-upload-files-img{
+            width: 300px;
+            height: 260px;
+            margin-top: 55px;
+        }
+
+        &__right-links-section{
+            @include margin(0, 0, 0, 35px);
+        }
+
+        &__question{
+            width: 945px;
+            @include margin(0, auto, 100px, auto);
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .services{
+        &__books-plans{
+            margin-bottom: 80px;
+            display: flex;
+        }
+
+        &__left{
+            width: 200px;
+            height: 520px;
+        }
+
+        &__left-books-img{
+            width: 200px;
+        }
+
+        &__left-description{
+            width: 180px;
+            margin-bottom: 45px;
+        }
+
+        &__right{
+            width: 510px;
+        }
+
+        &__arrow-img{
+            width: 60px;
+        }
+
+        &__right-hr-line{
+            width: 200px;
+        }
+
+        &__right-description{
+            width: 250px;
+        }
+
+        &__right-upload-files-img{
+            width: 210px;
+            height: 220px;
+            margin-top: 45px;
+        }
+
+        &__right-links-section{
+            @include margin(0, 0, 0, 30px);
+        }
+
+        &__question{
+            width: 720px;
+            @include margin(0, auto, 100px, auto);
+        }
+
+        &__question-left{
+            padding: 20px;
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .services{
+        &__title{
+            font-size: 36px;
+        }
+
+        &__description{
+            margin-bottom: 50px;
+        }
+
+        &__books-plans{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 80px;
+        }
+
+        &__left{
+            height: 220px;
+            width: 100%;
+            display: flex;
+            margin: 0;
+            margin-bottom: 20px;
+            box-shadow: 20px 34px 48px $box-shadow-color;
+        }
+
+        &__left-books-img{
+            height: 220px;
+        }
+
+        &__left div{
+            align-items: start;
+            padding: 15px;
+        }
+
+        &__left-title{
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        &__left-description{
+            width: 300px;
+            font-size: 12px;
+            margin-bottom: 25px;
+            text-align: start;
+        }
+
+        &__right{
+            width: 530px;
+            box-shadow: 20px 34px 48px $box-shadow-color;
+        }
+
+        &__arrow-img{
+            width: 50px;
+        }
+
+        &__right-content{
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        &__right-hr-line{
+            width: 200px;
+        }
+
+        &__right-description{
+            width: 250px;
+        }
+
+        &__right-upload-files-img{
+            width: 210px;
+            height: 220px;
+            margin-top: 20px;
+        }
+
+        &__right-links-section{
+            @include margin(0, 0, 0, 30px);
+        }
+
+        &__question{
+            width: 526px;
+            @include margin(0, auto, 60px, auto);
+        }
+
+        &__question-left{
+            padding: 10px;
+        }
+
+        &__question-right-link-button{
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (max-width:320px) {
+    .services{
+        &__title{
+            font-size: 24px;
+        }
+
+        &__description{
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        &__books-plans{
+            @include flex-column-properties(column, center, center);
+            margin-bottom: 40px;
+        }
+
+        &__left{
+            height: 550px;
+            width: 250px;
+            @include margin(0, 0, 20px, 0);
+        }
+
+        &__left-books-img {
+            width: 250px;
+        }
+
+        &__left-description {
+            width: 220px;
+        }
+
+        &__right{
+            width: 250px;
+            padding: 10px;
+        }
+
+        &__arrow-img{
+            width: 40px;
+        }
+
+        &__right-content{
+            @include display-direction-align-properties(flex, column, center);
+            @include margin(0, 0, 20px, 0);
+        }
+
+        &__right-title{
+            font-size: 20px;
+        }
+
+        &__right-hr-line{
+            width: 150px;
+        }
+
+        &__right-description{
+            width: 180px;
+        }
+
+        &__right-upload-files-img{
+            width: 210px;
+            height: 220px;
+            margin-top: 20px;
+        }
+
+        &__right-links-section{
+            @include margin(0, 0, 0, 0);
+            text-align: center;
+        }
+
+        &__question{
+            width: 250px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            border-left: 0;
+            border-top: 40px solid #ee9617;
+        }
+
+        &__question-left{
+            padding: 10px;
+            width: 250px;
+        }
+
+        &__question-sub-title{
+            font-size: 18px;
+        }
+
+        &__question-title{
+            font-size: 18px;
+        }
+
+        &__question-hr-line{
+            width: 200px;
+        }
+
+        &__question-call-us{
+            font-size: 18px;
+        }
+
+        &__question-right{
+            width: 250px;
+            height: 100px;
+        }
+
+        &__question-right-link-button{
+            padding: 10px;
+        }
+    }
+}
+
+.support{
+    @extend %container;
+    margin-bottom: 145px;
+
+    &__title{
+        font-size: 28px;
+        font-weight: 500;
+        color: $dark-black;
+        text-align: center;
+        @include margin(0, 0, 82px, 0);
+    }
+
+    &__sub-title{
+        color: $light-red;
+    }
+
+    &__content{
+        @include display-justify-properities(flex, space-between);
+    }
+
+    &__left{
+        @include display-direction-justify-properties(flex, column, center);
+    }
+
+    &__left-name-section{
+        @include display-align-properities(flex, center);
+        margin-bottom: 28px;
+    }
+
+    &__left-circle{
+        background-color: $question-section-border-color;
+        width: 14px;
+        height: 14px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+
+    &__left-title{
+        font-size: 22px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    &__left-hr-line{
+        width: 226px;
+        @include margin(0, 0, 28px, 0);
+        border: 1px solid $hr-line-color;
+    }
+
+    &__left-description{
+        width: 408px;
+        font-size: 15px;
+        color: $light-grey;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    &__team-img{
+        width: 500px;
+        height: 360px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .support{
+        margin-bottom: 125px;
+
+        &__title{
+            @include margin(0, 0, 70px, 0);
+        }
+
+        &__left{
+            padding-left: 20px;
+        }
+
+        &__team-img{
+            width: 470px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .support{
+        margin-bottom: 100px;
+
+        &__title{
+            @include margin(0, 0, 50px, 0);
+        }
+
+        &__left-hr-line{
+            width: 200px;
+        }
+
+        &__left-description{
+            width: 300px;
+        }
+
+        &__team-img{
+            width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .support{
+        margin-bottom: 60px;
+
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title{
+            @include margin(0, 0, 40px, 0);
+        }
+
+        &__left{
+            padding: 0;
+            padding-bottom: 20px;
+        }
+
+        &__left-description{
+            width: 500px;
+        }
+
+        &__team-img{
+            width: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .support{
+        margin-bottom: 40px;
+
+        &__title{
+            font-size: 20px;
+            @include margin(0, 0, 20px, 0);
+        }
+
+        &__left{
+            padding: 0;
+            padding-bottom: 20px;
+        }
+
+        &__left-title{
+            font-size: 18px;
+        }
+
+        &__left-hr-line{
+            width: 150px;
+        }
+
+        &__left-description{
+            width: 180px;
+            font-size: 12px;
+        }
+
+        &__team-img{
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+.testimonials{
+    @extend %container;
+    margin-bottom: 72px;
+
+    &__title{
+        font-size: 28px;
+        font-weight: 500;
+        color: $dark-black;
+        text-align: center;
+        margin-bottom: 86px;
+    }
+
+    &__sub-title{
+        color: $light-red;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__left-arrow{
+        @include flex-row-properities(center, center);
+        border-radius: 100px;
+        border: 1.5px solid rgba(0, 0, 0, 35%);
+        margin-right: 20px;
+        height: 42px;
+        width: 42px;
+        cursor: pointer;
+    }
+
+    &__right-arrow{
+        @include flex-row-properities(center, center);
+        border-radius: 100px;
+        border: 1.5px solid rgba(0, 0, 0, 35%);
+        height: 42px;
+        width: 42px;
+        cursor: pointer;
+    }
+
+    .fa-arrow-left:before {
+        color: rgba(0, 0, 0, 35%);
+    }
+
+    .fa-arrow-right:before {
+        color: rgba(0, 0, 0, 35%);
+    }
+
+    &__sections{
+        width: 262px;
+        height: 432px;
+        @include display-direction-align-properties(flex, column, center);
+        box-shadow: 0 20px 44px $box-shadow-color;
+        border: 1px dotted $light-blue;
+        border-radius: 10px;
+        margin-right: 40px;
+    }
+
+    &__img-section{
+        @include flex-row-properities(center, center);
+        width: 260px;
+        height: 210px;
+        border-radius: 10px;
+        background: $bg-linear-gradient;
+        margin-bottom: 18px;
+    }
+
+    &__img{
+        height: 140px;
+        width: 140px;
+    }
+
+    &__title{
+        font-size: 20px;
+        color: $header-bg-color;
+        font-weight: 500;
+        @include margin(0, 0, 12px, 0);
+    }
+
+    &__about{
+        font-size: 12px;
+        color: $grey-color;
+        font-weight: 400;
+        width: 218px;
+        margin: 0;
+        text-align: center;
+    }
+
+    #three{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .testimonials{
+        &__sections{
+            margin-right: 20px;
+        }
+
+        &__left-arrow{
+            border-radius: 80px;
+            margin-right: 10px;
+            height: 32px;
+            width: 32px;
+        }
+
+        &__right-arrow{
+            border-radius: 80px;
+            height: 32px;
+            width: 32px;
+        }
+
+        #three{
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .testimonials{
+        margin-bottom: 60px;
+
+        &__title{
+            font-size: 22px;
+            margin-bottom: 60px;
+        }
+
+        #three{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .testimonials{
+        margin-bottom: 60px;
+
+        &__title{
+            font-size: 22px;
+            margin-bottom: 60px;
+        }
+
+        #three{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .testimonials{
+        margin-bottom: 50px;
+
+        &__title{
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        &__sections{
+            margin-right: 10px;
+        }
+
+        #two{
+            display: none;
+        }
+
+        #three{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .testimonials{
+        margin-bottom: 40px;
+
+        &__sections{
+            width: 200px;
+            height: 420px;
+            margin-right: 0;
+        }
+
+        &__img-section{
+            width: 200px;
+            height: 180px;
+        }
+
+        &__img{
+            height: 100px;
+            width: 100px;
+        }
+
+        &__title{
+            font-size: 18px;
+        }
+
+        &__about{
+            font-size: 12px;
+            width: 160px;
+        }
+
+        &__title{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #two{
+            display: none;
+        }
+
+        #three{
+            display: none;
+        }
+
+        &__left-arrow{
+            display: none;
+        }
+
+        &__right-arrow{
+            display: none;
+        }
+    }
+}
+
+.hr-line{
+    @extend %hr-line;
+    margin-bottom: 12px;
+}
+
+.hr-line-1{
+    @extend %hr-line;
+    margin-bottom: 22px;
+}
