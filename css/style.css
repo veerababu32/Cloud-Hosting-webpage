@@ -142,6 +142,9 @@ body {
 .header__call-us {
   margin: 0 126px 0 0;
 }
+.header__call-us a {
+  color: #ee9617;
+}
 .header__contact-support {
   margin: 0;
 }
@@ -194,6 +197,9 @@ body {
 .banner .hamburger {
   display: none;
 }
+.banner .hamburger:hover {
+  cursor: pointer;
+}
 .banner .disable {
   display: none;
 }
@@ -205,6 +211,7 @@ body {
 .banner__navbar-title {
   font-size: 32px;
   font-weight: 500;
+  color: #ffffff;
   margin: 0;
 }
 .banner__navbar-right {
@@ -950,15 +957,28 @@ body {
     margin-bottom: 40px;
   }
   .services__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 550px;
     width: 250px;
     margin: 0 0 20px 0;
   }
+  .services__left div {
+    align-items: center;
+  }
   .services__left-books-img {
-    width: 250px;
+    width: 100%;
+    height: 100%;
+  }
+  .services__left-title {
+    margin-bottom: 25px;
+    font-size: 18px;
   }
   .services__left-description {
     width: 220px;
+    text-align: center;
   }
   .services__right {
     width: 250px;

@@ -11,6 +11,10 @@
         display: none;
     }
 
+    .hamburger:hover{
+        cursor: pointer;
+    }
+
     .disable{
         display: none;
     }
@@ -24,6 +28,7 @@
     &__navbar-title{
         font-size: 32px;
         font-weight: 500;
+        color: $white-color;
         margin: 0;
     }
 
@@ -946,17 +951,29 @@
         }
 
         &__left{
+            @include flex-column-properties(column, center, center);
             height: 550px;
             width: 250px;
             @include margin(0, 0, 20px, 0);
         }
 
-        &__left-books-img {
-            width: 250px;
+        &__left div{
+            align-items: center;
         }
 
-        &__left-description {
+        &__left-books-img{
+            width: 100%;
+            height: 100%;
+        }
+
+        &__left-title{
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        &__left-description{
             width: 220px;
+            text-align: center;
         }
 
         &__right{

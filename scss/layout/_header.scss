@@ -27,6 +27,10 @@
         @include margin(0, 126px, 0, 0);
     }
 
+    &__call-us a {
+        color: $header-left-anchor-color;
+    }
+
     &__contact-support{
         margin: 0;
     }
